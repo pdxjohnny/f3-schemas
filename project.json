@@ -1,0 +1,60 @@
+{
+    "title": "Project",
+    "description": "A software project that resides on a forge (Gitea, GitLab, etc.).",
+
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+	"index": {
+	    "description": "Unique identifier of the project.",
+	    "type": "number"
+	},
+	"name": {
+	    "description": "Name of the project, relative to the owner.",
+	    "type": "string"
+	},
+	"owner": {
+	    "description": "Owner of the project, either a forge user or an organization.",
+	    "type": "string"
+	},
+	"is_private": {
+	    "description": "True if the visibility of the project is not public.",
+	    "type": "boolean"
+	},
+	"is_mirror": {
+	    "description": "True if it is a mirror of a project residing on another forge.",
+	    "type": "boolean"
+	},
+	"description": {
+		"description": "Long, multiline, description of the project.",
+	    "type": "string"
+	},
+	"clone_url": {
+	    "description": "URL to clone the git repository of the project.",
+	    "type": "string"
+	},
+	"original_url": {
+	    "description": "URL of the homepage of the project.",
+	    "type": "string"
+	},
+	"default_branch": {
+	    "description": "Name of the default branch in the git repository.",
+	    "type": "string"
+	}
+    },
+    "required": [
+	"index",
+	"name",
+	"owner",
+	"is_private",
+	"is_mirror",
+	"description",
+	"clone_url",
+	"original_url",
+	"default_branch"
+    ],
+
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://example.com/issue.json",
+    "$$target": "issue.json"
+}
