@@ -1,0 +1,195 @@
+{
+    "title": "PullRequest",
+    "description": "Pull requests associated to a repository within a forge (Gitea, GitLab, etc.).",
+
+    "type": "array",
+    "items": {
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+	    "number": {
+		"description": "Unique identifier, relative to the repository.",
+		"type": "number"
+	    },
+	    "poster_id": {
+		"description": "Unique identifier of the user who authored the pull request.",
+		"type": "number"
+	    },
+	    "poster_name": {
+		"description": "Name of the user who authored the pull request.",
+		"type": "string"
+	    },
+	    "poster_email": {
+		"description": "Email of the user who authored the pull request.",
+		"type": "string"
+	    },
+	    "title": {
+		"description": "Short description displayed as the title.",
+		"type": "string"
+	    },
+	    "content": {
+		"description": "Long, multiline, description.",
+		"type": "string"
+	    },
+	    "milestone": {
+		"description": "Name of the milestone.",
+		"type": "string"
+	    },
+	    "state": {
+		"description": "A 'closed' pull request will not see any activity in the future, otherwise it is 'open'.",
+		"enum": [
+		    "closed",
+		    "open"
+		]
+	    },
+	    "is_locked": {
+		"description": "A locked pull request can only be modified by privileged users.",
+		"type": "boolean"
+	    },
+	    "created": {
+		"description": "Creation time.",
+		"type": "string",
+		"format": "date-time"
+	    },
+	    "updated": {
+		"description": "Last update time.",
+		"type": "string",
+		"format": "date-time"
+	    },
+	    "closed": {
+		"description": "The last time 'state' changed to 'closed'.",
+		"anyOf": [
+		    {
+			"type": "string",
+			"format": "date-time"
+		    },
+		    {
+			"type": "null"
+		    }
+		]
+	    },
+	    "labels": {
+		"description": "List of labels.",
+		"anyOf": [
+		    {
+			"type": "array",
+			"items": {
+			    "$ref": "label.json"
+			}
+		    },
+		    {
+			"type": "null"
+		    }
+		]
+	    },
+	    "reactions": {
+		"description": "List of reactions.",
+		"anyOf": [
+		    {
+			"type": "array",
+			"items": {
+			    "$ref": "reaction.json"
+			}
+		    },
+		    {
+			"type": "null"
+		    }
+		]
+	    },
+	    "assignees": {
+		"description": "List of assignees.",
+		"anyOf": [
+		    {
+			"type": "array",
+			"items": {
+			    "description": "Name of a user assigned to the issue.",
+			    "type": "string"
+			}
+		    },
+		    {
+			"type": "null"
+		    }
+		]
+	    },
+	    "patch_url": {
+		"description": "URL from which the patch of the pull request can be retrieved.",
+		"type": "string"
+	    },
+	    "merged": {
+		"description": "True if the pull request was merged.",
+		"type": "boolean"
+	    },
+	    "merged_time": {
+		"description": "The time when the pull request was merged.",
+		"anyOf": [
+		    {
+			"type": "string",
+			"format": "date-time"
+		    },
+		    {
+			"type": "null"
+		    }
+		]
+	    },
+	    "merged_commit_sha": {
+		"description": "The SHA of the merge commit.",
+		"anyOf": [
+		    {
+			"type": "string"
+		    },
+		    {
+			"type": "null"
+		    }
+		]
+	    },
+	    "head": {
+		"description": "The changes proposed in the pull request.",
+		"anyOf": [
+		    {
+			"type": "object",
+			"items": {
+			    "$ref": "pullrequestbranch.json"
+			}
+		    },
+		    {
+			"type": "null"
+		    }
+		]
+	    },
+	    "base": {
+		"description": "The branch where the pull request changes in the head are to be merged.",
+		"anyOf": [
+		    {
+			"type": "object",
+			"items": {
+			    "$ref": "pullrequestbranch.json"
+			}
+		    },
+		    {
+			"type": "null"
+		    }
+		]
+	    }
+	},
+	"required": [
+	    "number",
+	    "poster_id",
+	    "poster_name",
+	    "poster_email",
+	    "title",
+	    "content",
+	    "state",
+	    "is_locked",
+	    "created",
+	    "updated",
+	    "patch_url",
+	    "merged",
+	    "head",
+	    "base"
+	]
+    },
+
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://example.com/pullrequest.json",
+    "$$target": "pullrequest.json"
+}

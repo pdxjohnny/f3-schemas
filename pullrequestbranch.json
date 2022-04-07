@@ -1,0 +1,40 @@
+{
+    "title": "PullRequest reference to a commit",
+    "description": "The location of a commit, including the URL of the repository where it can be found.",
+
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+	"clone_url": {
+	    "description": "URL of the repository where the commit is located.",
+	    "type": "string"
+	},
+	"ref": {
+	    "description": "Git reference of the commit.",
+	    "type": "string"
+	},
+	"sha": {
+	    "description": "SHA of the commit.",
+	    "type": "string"
+	},
+	"repo_name": {
+	    "description": "Name of the project that contains the git repository.",
+	    "type": "string"
+	},
+	"owner_name": {
+	    "description": "Name of the user or organization that contains the project.",
+	    "type": "string"
+	}
+    },
+    "required": [
+	"clone_url",
+	"ref",
+	"sha",
+	"repo_name",
+	"owner_name"
+    ],
+
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://example.com/pullrequestbranch.json",
+    "$$target": "pullrequestbranch.json"
+}
