@@ -74,25 +74,46 @@
 	    },
 	    "labels": {
 		"description": "List of labels.",
-		"type": "array",
-		"items": {
-		    "$ref": "label.json"
-		}
+		"anyOf": [
+		    {
+			"type": "array",
+			"items": {
+			    "$ref": "label.json"
+			}
+		    },
+		    {
+			"type": "null"
+		    }
+		]
 	    },
 	    "reactions": {
 		"description": "List of reactions.",
-		"type": "array",
-		"items": {
-		    "$ref": "reaction.json"
-		}
+		"anyOf": [
+		    {
+			"type": "array",
+			"items": {
+			    "$ref": "reaction.json"
+			}
+		    },
+		    {
+			"type": "null"
+		    }
+		]
 	    },
 	    "assignees": {
 		"description": "List of assignees.",
-		"type": "array",
-		"items": {
-		    "description": "Name of a user assigned to the issue.",
-		    "type": "string"
-		}
+		"anyOf": [
+		    {
+			"type": "array",
+			"items": {
+			    "description": "Name of a user assigned to the issue.",
+			    "type": "string"
+			}
+		    },
+		    {
+			"type": "null"
+		    }
+		]
 	    }
 	},
 	"required": [
