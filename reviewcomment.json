@@ -1,0 +1,86 @@
+{
+    "title": "Review comment",
+    "description": "A comment in the context of a review.",
+
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+	"id": {
+	    "description": "Unique identifier of the review comment.",
+	    "type": "number"
+	},
+	"in_reply_to": {
+	    "description": "Unique identifier of the review comment replied to.",
+	    "type": "number"
+	},
+	"content": {
+	    "description": "The text of the review comment.",
+	    "type": "string"
+	},
+	"tree_path": {
+	    "description": "The relative path to the file that necessitates a comment.",
+	    "type": "string"
+	},
+	"diff_hunk": {
+	    "description": "The hunk being commented on.",
+	    "type": "string"
+	},
+	"position": {
+	    "description": "Equals the number of lines down from the first '@@' hunk header in the file you want to add a comment. The line just below the '@@' line is position 1, the next line is position 2, and so on. The position in the diff continues to increase through lines of whitespace and additional hunks until the beginning of a new file.",
+	    "type": "number"
+	},
+	"line": {
+	    "description": "The line number of the comment in the tree_path.",
+	    "type": "number"
+	},
+	"commit_id": {
+	    "description": "The SHA of the commit needing a comment. Not using the latest commit SHA may render your comment outdated if a subsequent commit modifies the line you specify as the position.",
+	    "type": "string"
+	},
+	"poster_id": {
+	    "description": "Unique identifier of the user who authored the comment.",
+	    "type": "number"
+	},
+	"reactions": {
+	    "description": "List of reactions.",
+	    "anyOf": [
+		{
+		    "type": "array",
+		    "items": {
+			"$ref": "reaction.json"
+		    }
+		},
+		{
+		    "type": "null"
+		}
+	    ]
+	},
+	"created_at": {
+	    "description": "Creation time.",
+	    "type": "string",
+	    "format": "date-time"
+	},
+	"updated_at": {
+	    "description": "Last update time.",
+	    "type": "string",
+	    "format": "date-time"
+	}
+    },
+    "required": [
+	"id",
+	"in_reply_to",
+	"content",
+	"tree_path",
+	"diff_hunk",
+	"position",
+	"line",
+	"commit_id",
+	"poster_id",
+	"created_at",
+	"updated_at"
+    ],
+
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://example.com/reviewcomment.json",
+    "$$target": "reviewcomment.json"
+}
