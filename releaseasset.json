@@ -1,0 +1,57 @@
+{
+    "title": "Release asset",
+    "description": "A file associated with a release.",
+
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+	"id": {
+	    "description": "Unique identifier of the release asset.",
+	    "type": "number"
+	},
+	"name": {
+	    "description": "The name of the release asset.",
+	    "type": "string"
+	},
+	"content_type": {
+	    "description": "The content type of the release asset (application/zip, etc.).",
+	    "type": "string"
+	},
+	"size": {
+	    "description": "Size in bytes of the release asset.",
+	    "type": "number"
+	},
+	"download_count": {
+	    "description": "The number of times the release asset was downloaded.",
+	    "type": "number"
+	},
+	"created": {
+	    "description": "Creation time.",
+	    "type": "string",
+	    "format": "date-time"
+	},
+	"updated": {
+	    "description": "Last update time.",
+	    "type": "string",
+	    "format": "date-time"
+	},
+	"download_url": {
+	    "description": "The URL from which the release asset can be downloaded.",
+	    "type": "string"
+	}
+    },
+    "required": [
+	"id",
+	"name",
+	"content_type",
+	"size",
+	"download_count",
+	"created",
+	"updated",
+	"download_url"
+    ],
+
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://example.com/releaseasset.json",
+    "$$target": "releaseasset.json"
+}
