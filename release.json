@@ -7,6 +7,10 @@
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {
+	    "id": {
+		"description": "Unique identifier.",
+		"type": "number"
+	    },
 	    "tag_name": {
 		"description": "Git tag name of the release.",
 		"type": "string"
@@ -69,6 +73,7 @@
 	    }
 	},
 	"required": [
+	    "id",
 	    "tag_name",
 	    "name",
 	    "body",
