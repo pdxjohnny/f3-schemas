@@ -1,0 +1,23 @@
+{
+    "title": "Topic",
+    "description": "A list of categories associated with a project.",
+
+    "type": "array",
+    "items": {
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+	    "name": {
+		"description": "The name of the category the project belongs to.",
+		"type": "string"
+	    }
+	},
+	"required": [
+	    "name"
+	]
+    },
+
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://example.com/topic.json",
+    "$$target": "topic.json"
+}
