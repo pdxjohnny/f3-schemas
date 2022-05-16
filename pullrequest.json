@@ -72,10 +72,7 @@
 		"description": "List of labels.",
 		"anyOf": [
 		    {
-			"type": "array",
-			"items": {
-			    "$ref": "label.json"
-			}
+			"$ref": "label.json"
 		    },
 		    {
 			"type": "null"
