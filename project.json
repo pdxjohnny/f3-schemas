@@ -55,6 +55,6 @@
     ],
 
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "$id": "http://example.com/issue.json",
-    "$$target": "issue.json"
+    "$id": "http://example.com/project.json",
+    "$$target": "project.json"
 }
