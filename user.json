@@ -1,0 +1,38 @@
+{
+    "title": "User",
+    "description": "A forge user.",
+
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+	"index": {
+	    "description": "Unique identifier of the user.",
+	    "type": "number"
+	},
+	"name": {
+	    "description": "User readable name of the user.",
+	    "type": "string"
+	},
+	"email": {
+	    "description": "Mail of the user.",
+	    "type": "string"
+	},
+	"username": {
+	    "description": "Unique name of the user.",
+	    "type": "string"
+	},
+	"password": {
+	    "description": "Password of the user.",
+	    "type": "string"
+	}
+    },
+    "required": [
+	"index",
+	"name",
+	"username"
+    ],
+
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://example.com/user.json",
+    "$$target": "user.json"
+}
