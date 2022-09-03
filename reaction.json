@@ -5,6 +5,10 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
+	"index": {
+	    "description": "Unique identifier of the reaction.",
+	    "type": "number"
+	},
 	"user_id": {
 	    "description": "Unique identifier of the user who authored the reaction.",
 	    "type": "number"
@@ -19,6 +23,7 @@
 	}
     },
     "required": [
+	"index",
 	"user_id",
 	"content"
     ],

@@ -2,89 +2,86 @@
     "title": "Release",
     "description": "Assets that constitute a release for a given tag.",
 
-    "type": "array",
-    "items": {
-	"type": "object",
-	"additionalProperties": false,
-	"properties": {
-	    "id": {
-		"description": "Unique identifier.",
-		"type": "number"
-	    },
-	    "tag_name": {
-		"description": "Git tag name of the release.",
-		"type": "string"
-	    },
-	    "target_commitish": {
-		"description": "Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists.",
-		"type": "string"
-	    },
-	    "name": {
-		"description": "The name of the release.",
-		"type": "string"
-	    },
-	    "body": {
-		"description": "Text describing the contents of the release.",
-		"type": "string"
-	    },
-	    "draft": {
-		"description": "True if the release is a draft.",
-		"type": "boolean"
-	    },
-	    "prerelease": {
-		"description": "True if the release is a pre-release.",
-		"type": "boolean"
-	    },
-	    "publisher_id": {
-		"description": "Unique identifier of the user who authored the release.",
-		"type": "number"
-	    },
-	    "publisher_name": {
-		"description": "Name of the user who authored the release.",
-		"type": "string"
-	    },
-	    "publisher_email": {
-		"description": "Email of the user who authored the release.",
-		"type": "string"
-	    },
-	    "assets": {
-		"description": "List of assets associated with the release.",
-		"anyOf": [
-		    {
-			"type": "array",
-			"items": {
-			    "$ref": "releaseasset.json"
-			}
-		    },
-		    {
-			"type": "null"
-		    }
-		]
-	    },
-	    "created": {
-		"description": "Creation time.",
-		"type": "string",
-		"format": "date-time"
-	    },
-	    "published": {
-		"description": "Publication time.",
-		"type": "string",
-		"format": "date-time"
-	    }
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+	"index": {
+	    "description": "Unique identifier.",
+	    "type": "number"
 	},
-	"required": [
-	    "id",
-	    "tag_name",
-	    "name",
-	    "body",
-	    "draft",
-	    "prerelease",
-	    "publisher_id",
-	    "publisher_name",
-	    "created",
-	    "published"
-	]
+	"tag_name": {
+	    "description": "Git tag name of the release.",
+	    "type": "string"
+	},
+	"target_commitish": {
+	    "description": "Specifies the commitish value that determines where the Git tag is created from. Can be any branch or commit SHA. Unused if the Git tag already exists.",
+	    "type": "string"
+	},
+	"name": {
+	    "description": "The name of the release.",
+	    "type": "string"
+	},
+	"body": {
+	    "description": "Text describing the contents of the release.",
+	    "type": "string"
+	},
+	"draft": {
+	    "description": "True if the release is a draft.",
+	    "type": "boolean"
+	},
+	"prerelease": {
+	    "description": "True if the release is a pre-release.",
+	    "type": "boolean"
+	},
+	"publisher_id": {
+	    "description": "Unique identifier of the user who authored the release.",
+	    "type": "number"
+	},
+	"publisher_name": {
+	    "description": "Name of the user who authored the release.",
+	    "type": "string"
+	},
+	"publisher_email": {
+	    "description": "Email of the user who authored the release.",
+	    "type": "string"
+	},
+	"assets": {
+	    "description": "List of assets associated with the release.",
+	    "anyOf": [
+		{
+		    "type": "array",
+		    "items": {
+			"$ref": "releaseasset.json"
+		    }
+		},
+		{
+		    "type": "null"
+		}
+	    ]
+	},
+	"created": {
+	    "description": "Creation time.",
+	    "type": "string",
+	    "format": "date-time"
+	},
+	"published": {
+	    "description": "Publication time.",
+	    "type": "string",
+	    "format": "date-time"
+	}
     },
+    "required": [
+	"index",
+	"tag_name",
+	"name",
+	"body",
+	"draft",
+	"prerelease",
+	"publisher_id",
+	"publisher_name",
+	"created",
+	"published"
+    ],
 
     "$schema": "http://json-schema.org/draft-04/schema#",
     "$id": "http://example.com/release.json",

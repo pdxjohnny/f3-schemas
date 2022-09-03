@@ -1,0 +1,20 @@
+{
+    "title": "Repository",
+    "description": "VCS repository relative to a project.",
+
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+	"name": {
+	    "description": "Suffix to add to the clone URL of the project to access the repository.",
+	    "type": "string"
+	}
+    },
+    "required": [
+	"name"
+    ],
+
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://example.com/repository.json",
+    "$$target": "repository.json"
+}

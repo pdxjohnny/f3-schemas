@@ -2,86 +2,83 @@
     "title": "Review",
     "description": "A set of review comments on a pull/merge request.",
 
-    "type": "array",
-    "items": {
-	"type": "object",
-	"additionalProperties": false,
-	"properties": {
-	    "id": {
-		"description": "Unique identifier of the review.",
-		"type": "number"
-	    },
-	    "issue_index": {
-		"description": "Unique identifier of the pull/merge request targeted by the review.",
-		"type": "number"
-	    },
-	    "reviewer_id": {
-		"description": "Unique identifer of review author.",
-		"type": "number"
-	    },
-	    "reviewer_name": {
-		"description": "User name of the review author.",
-		"type": "string"
-	    },
-	    "official": {
-		"description": "True if a positive review counts to reach the required threshold.",
-		"anyOf": [
-		    {
-			"type": "boolean"
-		    },
-		    {
-			"type": "null"
-		    }
-		]
-	    },
-	    "commit_id": {
-		"description": "SHA of the commit targeted by the review.",
-		"type": "string"
-	    },
-	    "content": {
-		"description": "Cover message of the review.",
-		"type": "string"
-	    },
-	    "created_at": {
-		"description": "Creation time.",
-		"type": "string",
-		"format": "date-time"
-	    },
-	    "state": {
-		"description": "State of the review.",
-		"enum": [
-		    "PENDING",
-		    "APPROVED",
-		    "CHANGES_REQUESTED",
-		    "COMMENTED"
-		]
-	    },
-	    "comments": {
-		"description": "Review comments inserted on a specific line of the commit.",
-		"anyOf": [
-		    {
-			"type": "array",
-			"items": {
-			    "$ref": "reviewcomment.json"
-			}
-		    },
-		    {
-			"type": "null"
-		    }
-		]
-	    }
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+	"index": {
+	    "description": "Unique identifier of the review.",
+	    "type": "number"
 	},
-	"required": [
-	    "id",
-	    "issue_index",
-	    "reviewer_id",
-	    "reviewer_name",
-	    "commit_id",
-	    "content",
-	    "created_at",
-	    "state"
-	]
+	"issue_index": {
+	    "description": "Unique identifier of the pull/merge request targeted by the review.",
+	    "type": "number"
+	},
+	"reviewer_id": {
+	    "description": "Unique identifer of review author.",
+	    "type": "number"
+	},
+	"reviewer_name": {
+	    "description": "User name of the review author.",
+	    "type": "string"
+	},
+	"official": {
+	    "description": "True if a positive review counts to reach the required threshold.",
+	    "anyOf": [
+		{
+		    "type": "boolean"
+		},
+		{
+		    "type": "null"
+		}
+	    ]
+	},
+	"commit_id": {
+	    "description": "SHA of the commit targeted by the review.",
+	    "type": "string"
+	},
+	"content": {
+	    "description": "Cover message of the review.",
+	    "type": "string"
+	},
+	"created_at": {
+	    "description": "Creation time.",
+	    "type": "string",
+	    "format": "date-time"
+	},
+	"state": {
+	    "description": "State of the review.",
+	    "enum": [
+		"PENDING",
+		"APPROVED",
+		"CHANGES_REQUESTED",
+		"COMMENTED"
+	    ]
+	},
+	"comments": {
+	    "description": "Review comments inserted on a specific line of the commit.",
+	    "anyOf": [
+		{
+		    "type": "array",
+		    "items": {
+			"$ref": "reviewcomment.json"
+		    }
+		},
+		{
+		    "type": "null"
+		}
+	    ]
+	}
     },
+    "required": [
+	"index",
+	"issue_index",
+	"reviewer_id",
+	"reviewer_name",
+	"commit_id",
+	"content",
+	"created_at",
+	"state"
+    ],
 
     "$schema": "http://json-schema.org/draft-04/schema#",
     "$id": "http://example.com/release.json",

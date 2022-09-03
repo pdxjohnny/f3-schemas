@@ -40,6 +40,12 @@
 	"default_branch": {
 	    "description": "Name of the default branch in the git repository.",
 	    "type": "string"
+	},
+	"repositories": {
+	    "type": "array",
+	    "items": {
+		"$ref": "repository.json"
+	    }
 	}
     },
     "required": [
@@ -51,7 +57,8 @@
 	"description",
 	"clone_url",
 	"original_url",
-	"default_branch"
+	"default_branch",
+	"repositories"
     ],
 
     "$schema": "http://json-schema.org/draft-04/schema#",

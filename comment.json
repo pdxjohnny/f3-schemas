@@ -2,64 +2,61 @@
     "title": "Comment",
     "description": "Comments associated to an issue or a pull/merge request within the repository of a forge (Gitea, GitLab, etc.).",
 
-    "type": "array",
-    "items": {
-	"type": "object",
-	"additionalProperties": false,
-	"properties": {
-	    "issue_index": {
-		"description": "Unique identifier of the issue or pull/merge request containing the comment.",
-		"type": "number"
-	    },
-	    "index": {
-		"description": "Unique identifier of the comment.",
-		"type": "number"
-	    },
-	    "poster_id": {
-		"description": "Unique identifier of the user who authored the comment.",
-		"type": "number"
-	    },
-	    "poster_name": {
-		"description": "Name of the user who authored the comment.",
-		"type": "string"
-	    },
-	    "poster_email": {
-		"description": "Email of the user who authored the comment.",
-		"type": "string"
-	    },
-	    "created": {
-		"description": "Creation time.",
-		"type": "string",
-		"format": "date-time"
-	    },
-	    "updated": {
-		"description": "Last update time.",
-		"type": "string",
-		"format": "date-time"
-	    },
-	    "content": {
-		"description": "Multiline content of the comment.",
-		"type": "string"
-	    },
-	    "reactions": {
-		"description": "List of reactions.",
-		"type": "array",
-		"items": {
-		    "$ref": "reaction.json"
-		}
-	    }
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+	"issue_index": {
+	    "description": "Unique identifier of the issue or pull/merge request containing the comment.",
+	    "type": "number"
 	},
-	"required": [
-	    "issue_index",
-	    "index",
-	    "poster_id",
-	    "poster_name",
-	    "poster_email",
-	    "created",
-	    "updated",
-	    "content"
-	]
+	"index": {
+	    "description": "Unique identifier of the comment.",
+	    "type": "number"
+	},
+	"poster_id": {
+	    "description": "Unique identifier of the user who authored the comment.",
+	    "type": "number"
+	},
+	"poster_name": {
+	    "description": "Name of the user who authored the comment.",
+	    "type": "string"
+	},
+	"poster_email": {
+	    "description": "Email of the user who authored the comment.",
+	    "type": "string"
+	},
+	"created": {
+	    "description": "Creation time.",
+	    "type": "string",
+	    "format": "date-time"
+	},
+	"updated": {
+	    "description": "Last update time.",
+	    "type": "string",
+	    "format": "date-time"
+	},
+	"content": {
+	    "description": "Multiline content of the comment.",
+	    "type": "string"
+	},
+	"reactions": {
+	    "description": "List of reactions.",
+	    "type": "array",
+	    "items": {
+		"$ref": "reaction.json"
+	    }
+	}
     },
+    "required": [
+	"issue_index",
+	"index",
+	"poster_id",
+	"poster_name",
+	"poster_email",
+	"created",
+	"updated",
+	"content"
+    ],
 
     "$schema": "http://json-schema.org/draft-04/schema#",
     "$id": "http://example.com/comment.json",

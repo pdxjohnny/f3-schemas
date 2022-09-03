@@ -5,7 +5,7 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-	"id": {
+	"index": {
 	    "description": "Unique identifier of the release asset.",
 	    "type": "number"
 	},
@@ -41,7 +41,7 @@
 	}
     },
     "required": [
-	"id",
+	"index",
 	"name",
 	"content_type",
 	"size",
