@@ -76,7 +76,7 @@
 		{
 		    "type": "array",
 		    "items": {
-			"$ref": "label.json"
+			"type": "string"
 		    }
 		},
 		{
