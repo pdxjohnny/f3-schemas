@@ -41,10 +41,17 @@
 	},
 	"reactions": {
 	    "description": "List of reactions.",
-	    "type": "array",
-	    "items": {
-		"$ref": "reaction.json"
-	    }
+	    "anyOf": [
+		{
+		    "type": "array",
+		    "items": {
+			"$ref": "reaction.json"
+		    }
+		},
+		{
+		    "type": "null"
+		}
+	    ]
 	}
     },
     "required": [
