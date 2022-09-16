@@ -22,7 +22,11 @@
 	    "type": "string"
 	},
 	"diff_hunk": {
-	    "description": "The hunk being commented on.",
+	    "description": "The hunk being commented on, which is the same as the patch only in a different format.",
+	    "type": "string"
+	},
+	"patch": {
+	    "description": "The patch being commented on, which is the same as the diff_hunk only in a different format.",
 	    "type": "string"
 	},
 	"position": {
@@ -72,6 +76,7 @@
 	"content",
 	"tree_path",
 	"diff_hunk",
+	"patch",
 	"position",
 	"line",
 	"commit_id",
