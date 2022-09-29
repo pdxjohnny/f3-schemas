@@ -17,14 +17,6 @@
 	    "description": "Unique identifier of the user who authored the comment.",
 	    "type": "number"
 	},
-	"poster_name": {
-	    "description": "Name of the user who authored the comment.",
-	    "type": "string"
-	},
-	"poster_email": {
-	    "description": "Email of the user who authored the comment.",
-	    "type": "string"
-	},
 	"created": {
 	    "description": "Creation time.",
 	    "type": "string",
@@ -58,8 +50,6 @@
 	"issue_index",
 	"index",
 	"poster_id",
-	"poster_name",
-	"poster_email",
 	"created",
 	"updated",
 	"content"

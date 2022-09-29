@@ -13,10 +13,6 @@
 	    "description": "Unique identifier of the user who authored the reaction.",
 	    "type": "number"
 	},
-	"user_name": {
-	    "description": "Name of the user who authored the reaction.",
-	    "type": "string"
-	},
 	"content": {
 	    "description": "Representation of the reaction",
 	    "type": "string"

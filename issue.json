@@ -13,14 +13,6 @@
 	    "description": "Unique identifier of the user who authored the issue.",
 	    "type": "number"
 	},
-	"poster_name": {
-	    "description": "Name of the user who authored the issue.",
-	    "type": "string"
-	},
-	"poster_email": {
-	    "description": "Email of the user who authored the issue.",
-	    "type": "string"
-	},
 	"title": {
 	    "description": "Short description displayed as the title.",
 	    "type": "string"
@@ -117,7 +109,6 @@
     "required": [
 	"index",
 	"poster_id",
-	"poster_name",
 	"title",
 	"content",
 	"state",

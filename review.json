@@ -17,10 +17,6 @@
 	    "description": "Unique identifer of review author.",
 	    "type": "number"
 	},
-	"reviewer_name": {
-	    "description": "User name of the review author.",
-	    "type": "string"
-	},
 	"official": {
 	    "description": "True if a positive review counts to reach the required threshold.",
 	    "anyOf": [
@@ -73,7 +69,6 @@
 	"index",
 	"issue_index",
 	"reviewer_id",
-	"reviewer_name",
 	"commit_id",
 	"content",
 	"created_at",
