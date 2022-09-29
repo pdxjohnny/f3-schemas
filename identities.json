@@ -1,0 +1,22 @@
+{
+    "title": "Identities",
+    "description": "Pairs of identities maping one forge to another. The first element is the id in the source forge, the second element is the id in the destination forge.",
+
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+	"pairs": {
+	    "type": "array",
+	    "items": {
+		"type": "number"
+	    }
+	}
+    },
+    "required": [
+	"pairs"
+    ],
+
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$id": "http://example.com/identities.json",
+    "$$target": "identities.json"
+}
