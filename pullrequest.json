@@ -1,6 +1,6 @@
 {
     "title": "PullRequest",
-    "description": "Pull requests associated to a repository within a forge (Gitea, GitLab, etc.).",
+    "description": "Pull requests associated to a repository within a forge (Forgejo, GitLab, etc.).",
 
     "type": "object",
     "additionalProperties": false,

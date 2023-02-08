@@ -1,6 +1,6 @@
 {
     "title": "Comment",
-    "description": "Comments associated to an issue or a pull/merge request within the repository of a forge (Gitea, GitLab, etc.).",
+    "description": "Comments associated to an issue or a pull/merge request within the repository of a forge (Forgejo, GitLab, etc.).",
 
     "type": "object",
     "additionalProperties": false,

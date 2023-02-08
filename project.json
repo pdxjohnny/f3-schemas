@@ -1,6 +1,6 @@
 {
     "title": "Project",
-    "description": "A software project that resides on a forge (Gitea, GitLab, etc.).",
+    "description": "A software project that resides on a forge (Forgejo, GitLab, etc.).",
 
     "type": "object",
     "additionalProperties": false,
